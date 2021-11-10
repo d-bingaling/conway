@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import {NameAge} from './NameAge';
 import {FaveSeries} from './FaveSeries';
 import {ClickyButton} from './ClickyButton';
 
@@ -15,8 +14,6 @@ function App() {
         <p>
           Dan's the bomb.
         </p>
-        <NameAge name="Andrew" age="37"/>
-        <NameAge age="26"/>
         <FaveSeries name="Parks and Recreation" amount="2" streaming_service="NowTV"/>
         <ClickyButton/>
         <ClickyButton initCount={0} />
