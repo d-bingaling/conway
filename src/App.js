@@ -16,9 +16,12 @@ function App() {
           Dan's the bomb.
         </p>
         <NameAge name="Andrew" age="37"/>
-        <NameAge name="Dan" age="26"/>
+        <NameAge age="26"/>
         <FaveSeries name="Parks and Recreation" amount="2" streaming_service="NowTV"/>
         <ClickyButton/>
+        <ClickyButton initCount={0} />
+        <ClickyButton initCount={10} />
+        <ClickyButton initCount={100} />
         
         <a
           className="App-link"
