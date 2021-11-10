@@ -1,21 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import {NameAge} from './NameAge';
-import {FaveSeries} from './FaveSeries';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-      </header>
-      <body>
         <p>
           Dan's the bomb.
         </p>
-        <NameAge name="Andrew" age="37"/>
-        <NameAge name="Dan" age="26"/>
-        <FaveSeries name="Parks and Recreation" amount="2" streaming_service="NowTV"/>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -24,7 +17,7 @@ function App() {
         >
           Learn React
         </a>
-      </body>
+      </header>
     </div>
   );
 }
