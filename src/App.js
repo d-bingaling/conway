@@ -15,8 +15,7 @@ function App() {
           Dan's the bomb.
         </p>
         <FaveSeries name="Parks and Recreation" amount="2" streaming_service="NowTV"/>
-        <ClickyButton/>
-        <ClickyButton initCount={0} />
+        <ClickyButton initCount={0} name="Dan Bingaling"/>
         <ClickyButton initCount={10} />
         <ClickyButton initCount={100} />
         

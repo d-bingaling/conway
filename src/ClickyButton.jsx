@@ -15,6 +15,5 @@ export const ClickyButton = (props) => {
         <p>You have clicked the button {counter} times.</p>
         <p>{isEven ? "that's and even number" : null}</p>
         <NameAge/>
-        <NameAge name="Dan" age="26"/>
     </div>
 }
