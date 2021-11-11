@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
 
@@ -16,6 +16,11 @@ def foo():
 @app.route("/dan/<name>")
 def dan(name):
     return f"<h1>Hi {name}</h1>"
+
+@app.route("/template-test")
+@app.route("/template-test/<name>")
+def template_test(name="Andy"):
+    return render_template("hello.html", name=name, users=users)
 
 # creating a user table
 users = {
