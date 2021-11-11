@@ -2,9 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 import {FaveSeries} from './FaveSeries';
 import {ClickyButton} from './ClickyButton';
-
+import {EmployeeData, useEmployeeData} from './EmployeeData';
+import {handleGetEmployeeData} from './EmployeeData';
 
 function App() {
+
+  const employeeState = useEmployeeData(); 
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,15 +22,7 @@ function App() {
         <ClickyButton initCount={0} name="Dan Bingaling"/>
         <ClickyButton initCount={10} />
         <ClickyButton initCount={100} />
-        
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <EmployeeData {...employeeState}/>
       </body>
     </div>
   );

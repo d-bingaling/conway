@@ -1,6 +1,8 @@
 from flask import Flask, jsonify, render_template
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # app.route is a decorator, this allows us to use the url route
 # without writing hella code.
@@ -33,7 +35,7 @@ users = {
 
 # adding <> to the route works as a variable
 # add int to the beginning of the variabe, as that is what we expect to recieve.
-@app.route("/user/<int:user_id>/job")
+@app.route("/user/<int:user_id>")
 def get_user(user_id):
 
     user = users[user_id]
