@@ -67,3 +67,29 @@ def get_userdetails(user_id, key):
         return jsonify(f"We don't have a detail called '{key}'"), 400
    
     return jsonify(key) 
+
+
+foods = {
+    1: {"name": "burrito", "cuisine": "Mexican"},
+    2: {"name": "gnocci", "cuisine": "Italian"},
+    3: {"name": "snails", "cuisine": "French"},
+    4: {"name": "fish and chips", "cuisine": "British"},
+    5: {"name": "daal", "cuisine": "Indian"},
+}
+
+
+@app.route("/foods/<int:food_id>")
+def get_grub(food_id):
+
+    food = foods[food_id]
+
+    return jsonify(food)
+
+# get just a users job
+@app.route("/foods/<int:food_id>/cuisine")
+def get_grub_cuisine(food_id):
+
+    food = foods[food_id]
+
+    what_cuisine = foods["cuisine"]
+    return jsonify(what_cuisine)
